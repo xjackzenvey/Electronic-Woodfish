@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>电子木鱼</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- 背景图（固定，无模糊） -->
+  <div id="bg-image"></div>
+
+  <!-- 磨砂遮罩层（关键！必须在背景图之上、内容之下） -->
+  <div id="frosted-overlay"></div>
+
+  <!-- 所有交互内容 -->
+  <div id="ui-layer">
+    <div id="merit-count">功德: 0</div>
+    <div id="woodfish-container">
+      <img id="woodfish" src="/assets/woodfish.svg" alt="木鱼" />
+    </div>
+    <div id="floating-container"></div>
+    <div id="controls">
+      <a href="https://github.com/your-username/your-repo" target="_blank" id="github-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <button id="settings-btn">
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 模态框（独立于 ui-layer） -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>木鱼设置</h2>
+      <select id="config-select"></select>
+      <p>当前配置：<span id="current-config">默认</span></p>
+    </div>
+  </div>
+
+  <audio id="audio-element" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

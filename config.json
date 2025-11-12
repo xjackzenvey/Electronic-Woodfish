@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ciallo",
+    "name": "Ciallo～(∠・ω< )⌒★",
+    "sound": "/assets/ciallo/ciallo.wav",
+    "background": "/assets/ciallo/bg.jpg"
+  },
+  {
+    "id": "test-default",
+    "name": "test-默认木鱼",
+    "sound": "/assets/default/Windows-Background.wav",
+    "background": "/assets/default/back.png"
+  }
+
+]
