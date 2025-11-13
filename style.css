@@ -125,11 +125,25 @@ body {
 /* 控制按钮 */
 #controls {
   position: absolute;
-  bottom: 16px;
-  right: 16px;
+  top: 16px;        /* 距离顶部 16px */
+  right: 16px;      /* 距离右侧 16px */
   display: flex;
   gap: 14px;
   z-index: 10;
+  /* 确保在小屏上不会被状态栏遮挡 */
+  padding-top: env(safe-area-inset-top);
+}
+
+@media (max-width: 375px) {
+  #controls {
+    gap: 10px;
+  }
+  #github-icon,
+  #settings-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 #github-icon,
