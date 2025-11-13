@@ -56,7 +56,7 @@ function applyConfig(id) {
 }
 
 function bindEvents() {
-  woodfishEl.addEventListener('click', () => {
+  const handleTap =  () => {
     // 动画
     woodfishEl.classList.remove('tapped');
     void woodfishEl.offsetWidth; // 触发重排
@@ -79,7 +79,10 @@ function bindEvents() {
     setTimeout(() => {
       if (textEl.parentNode) textEl.parentNode.removeChild(textEl);
     }, 1600);
-  });
+  };
+
+  woodfishEl.addEventListener('click', handleTap);
+  woodfishEl.addEventListener('touchstart', handleTap, { passive: true });
 
   settingsBtn.addEventListener('click', () => {
     modal.classList.remove('hidden');
